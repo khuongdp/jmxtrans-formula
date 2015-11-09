@@ -8,7 +8,7 @@
 {%- set version = g.get('version', p.get('version', '250')) %}
 {%- set version_name = 'jmxtrans-' + version %}
 
-{%- set default_source_url = 'http://repo1.maven.org/maven2/org/jmxtrans/jmxtrans/250/jmxtrans-' + version + '-dist.tar.gz' %}
+{%- set default_source_url = 'http://repo1.maven.org/maven2/org/jmxtrans/jmxtrans/' + version + '/jmxtrans-' + version + '-dist.tar.gz' %}
 {%- set source_url       = g.get('source_url', p.get('source_url', default_source_url)) %}
 {%- set alt_home         = g.get('prefix', p.get('prefix', '/usr/lib/jmxtrans')) %}
 {%- set real_home        = '/usr/lib/' + version_name %}
