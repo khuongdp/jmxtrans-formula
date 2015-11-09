@@ -1,5 +1,3 @@
-{%- if 'monitor' in salt['grains.get']('roles',[]) %}
-
 {%- from 'jmxtrans/settings.sls' import jmxtrans with context %}
 {%- from 'graphite/settings.sls' import graphite with context %}
 
@@ -97,5 +95,3 @@ enable-jmxtrans-service:
   service.running:
     - name: jmxtrans
     - enable: True
-
-{%- endif %}
